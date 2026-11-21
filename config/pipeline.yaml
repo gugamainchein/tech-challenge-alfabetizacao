@@ -1,0 +1,30 @@
+source:
+  project: basedosdados
+  dataset: br_inep_avaliacao_alfabetizacao
+
+# "*" só até a exploração definir as colunas que vamos usar (custo de scan)
+tables:
+  alunos:
+    columns: "*"
+  municipio:
+    columns: "*"
+  uf:
+    columns: "*"
+  meta_alfabetizacao_brasil:
+    columns: "*"
+  meta_alfabetizacao_uf:
+    columns: "*"
+  meta_alfabetizacao_municipio:
+    columns: "*"
+  dicionario:
+    columns: "*"
+
+datasets:
+  bronze: bronze
+  silver: silver
+  gold: gold
+  ops: ops
+
+quality:
+  # limiar mínimo da taxa de correspondência dos joins, justificar em docs/qualidade.md
+  join_match_min: 0.98
